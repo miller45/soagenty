@@ -1,0 +1,12 @@
+venv
+input
+temp
+output
+__pycache__
+*.pyc
+*.pyo
+.env
+.env.azure_openai
+.venv
+.junie/config.json
+output/
