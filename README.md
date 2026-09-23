@@ -16,10 +16,21 @@ Observing the history of LLM tool calling. A small sandbox that lets an LLM solv
 
 ## Usage
 
+### Windows
+
 ```powershell
 .venv\Scripts\Activate.ps1
 python tool_call_sudoku-opencode-fp8.py
 ```
+
+### Linux / macOS
+
+```bash
+source .venv/bin/activate
+python tool_call_sudoku-opencode-fp8.py
+```
+
+Note: API key retrieval via `keyring` is currently only implemented for Windows (`get_api_key` returns an empty key on other platforms — see the TODO in `llm_scenarios.py`). To run on Linux, either set `ACTIVE_SCENARIO` to a scenario whose key can be resolved via the environment variable, or adjust `get_api_key` accordingly.
 
 Configuration is done via the global variables at the top of the script:
 
